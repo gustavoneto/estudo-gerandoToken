@@ -13,6 +13,8 @@ const getCode = () => {
       json: true
   }
 
+  console.log(options)
+
   return new Promise((resolve, reject)=>{
     rp.post(options).then( (resp) => {
       var code = resp.redirect_uri.split('&')[1].split('=')[1]
